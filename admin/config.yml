@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "website"
+    label: "Website"
+    files:
+      - name: "main"
+        label: "Website Content"
+        file: "content/site.json"
+        fields:
+          - label: "Business Name"
+            name: "businessName"
+            widget: "string"
+
+          - label: "Introduction"
+            name: "introduction"
+            widget: "text"
+
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - label: "Service Name"
+                name: "name"
+                widget: "string"
+
+              - label: "Description"
+                name: "description"
+                widget: "text"
+
+              - label: "Price"
+                name: "price"
+                widget: "number"
+
+              - label: "Image"
+                name: "image"
+                widget: "image"
